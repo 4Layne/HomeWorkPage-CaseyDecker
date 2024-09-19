@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <link rel="stylesheet" href="effects.css">
+   
+    <title>Title</title>
+
+
+<style>
+  body{
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+}
+  html{
+  scroll-behavior:inherit;
+}
+h1{
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  'Times New Roman', Times, serif;
+}
+
+
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  cursor: default;
+  -webkit-box-reflect: below -25px linear-gradient(transparent, #00000013);
+  font-size: 25px;
+}
+.title2{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  cursor: default;
+  -webkit-box-reflect: below -25px linear-gradient(transparent, #00000013);
+  font-size: 25px;
+}
+.title2 span{
+  position: relative;
+  display: inline-block;
+  font-size: 3em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: 800;
+  animation: textAnimate 2s ease-in-out infinite;
+  animation-delay: calc(0.15s * var(--i));
+}
+.title span {
+  position: relative;
+  display: inline-block;
+  font-size: 3em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: 800;
+  animation: textAnimate 2s ease-in-out infinite;
+  animation-delay: calc(0.15s * var(--i));
+}
+@keyframes textAnimate {
+  0% {
+    transform: translateY(0px);
+    color: transparent;
+    text-shadow: none;
+  }
+  20% {
+    transform: translateY(-60px);
+    color: white;
+    text-shadow: 0 0 5px #fff,
+      0 0 25px #fff,
+      0 0 50px #fff;
+  }
+  40%, 100% {
+    transform: translateY(0px);
+    color: transparent;
+    text-shadow: none;
+  }
+}
+
+
+.table-div{
+  margin-top: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }
+  table{
+    width: 800px;
+    border: 20px solid rgba(170, 170, 170, 0.534);
+    background-color: rgba(170, 170, 170, 0.534);
+    border-radius: 20px;
+    align-items: center;
+    height: 700px;
+  }
+  td{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid 2.3px  rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800; 
+  }
+  th{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 15px;
+    color: rgb(2, 2, 2);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+   }
+  .due-points-green{
+    color: #338820;
+    font-family:Georgia, 'Times New Roman', Times, serif 
+  }
+  .due-points-green:hover{
+    border-radius: 50px;
+    background-color:rgba(175, 169, 169, 0.85) ;
+    color: white;
+  }
+  .due-points-blue{
+    color:#390da9;
+    font-family:Georgia, 'Times New Roman', Times, serif 
+  }
+  .due-points-blue:hover{
+    border-radius: 50px;
+    background-color:rgba(193, 188, 188, 0.85) ;
+    color: white;
+  }
+  .link-blue{
+    color:#390da9 ;
+  }
+  .link-green{
+    color:#338820;
+  }
+  .link-green:hover{
+    border-radius: 50px;
+    background-color:rgba(193, 188, 188, 0.85) ;
+    color: white;
+  }
+
+
+</style>
+
+
+  </head>
+  <body>
+  
+    <div class="title2">
+      <span style="--i:1">C</span>
+      <span style="--i:2">A</span>
+      <span style="--i:3">S</span>
+      <span style="--i:4">E</span>
+      <span style="--i:5">Y</span>
+      <span style="--i:6">'</span>
+      <span style="--i:7">S</span>
+    </div>
+    <div class="title">
+      <span style="--i:1">H</span>
+      <span style="--i:1.5">o</span>
+      <span style="--i:2">m</span>
+      <span style="--i:2.5">e</span>
+      <span style="--i:3">W</span>
+      <span style="--i:3.5">o</span>
+      <span style="--i:4">r</span>
+      <span style="--i:4.5">k</span>
+      <span style="--i:5">P</span>
+      <span style="--i:5.5">a</span>
+      <span style="--i:6">g</span>
+      <span style="--i:6.5">e</span>
+    </div>
+ 
+    <div class="table-div">
+      <table>
+        <thead>
+        <tr>
+          <th> Assignment </th>
+          <th> Due </th>
+          <th> Points </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="link-green"> <a class="link-green" target="_blank" href="webpagereview.html">Browser Review</a> </td>
+          <td class="due-points-green"> 9/13 </td>
+          <td class="due-points-green"> 50 </td>
+        </tr>
+  
+        <tr>
+          <td class="link-green"><a class="link-blue" href="index.html"> HomePage </a></td>
+          <td class="due-points-blue" > 9/29 </td>
+          <td class="due-points-blue" > 50 </td>
+        </tr>
+  
+        <tr>
+          <td class="link-green"> <a class="link-green" href="index.html"> Movie Review </a></td>
+          <td class="due-points-green"> 9/27 </td>
+          <td class="due-points-green"> 50 </td>
+        </tr>
+  
+        <tr>
+          <td class="link-green"> <a class="link-blue" href="index.html"> Graphic Page</a> </td>
+          <td class="due-points-blue" > 10/4 </td>
+          <td class="due-points-blue" > 50 </td>
+        </tr>
+  
+        <tr>
+          <td class="link-green"> <a class="link-green" href="index.html"> Info Form</a> </td>
+          <td class="due-points-green"> 10/11 </td>
+          <td class="due-points-green"> 50 </td>
+        </tr>
+  
+        <tr>
+          <td class="link-green"> <a class="link-blue" href="index.html"> Website Review</a> </td>
+          <td class="due-points-blue" > 10/18 </td>
+          <td class="due-points-blue" > 50 </td>
+        </tr>
+        
+        <tr>
+          <td class="link-green"> <a class="link-green" href="index.html"> Dreamweaver </a> </td>
+          <td class="due-points-green"> 11/15 </td>
+          <td class="due-points-green"> 50 </td>
+        </tr>
+  
+        <tr>
+          <td class="link-green"> <a class="link-blue" href="index.html">Final</a> </td>
+          <td class="due-points-blue" > 12/10 </td>
+          <td class="due-points-blue" > 200 </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="loader">
+    <svg viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <svg viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <svg viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <a class="valid"  href="https://validator.w3.org/check?uri=referer" target="_blank" referrerpolicy="no-referrer-when-downgrade"><img src="picture/valid-html5.png" alt="HTML Valid"></a>
+  </div>
+  </body>
+</html>

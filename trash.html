@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+  .loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.loader svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loader svg circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 10px;
+  animation: animate 2s linear infinite;
+  stroke-linecap: round;
+}
+
+.loader svg:nth-child(1) circle {
+  filter: blur(10px);
+  stroke: #43acff;
+}
+
+.loader svg:nth-child(2) circle {
+  filter: blur(20px);
+  stroke: #43acff;
+}
+
+@keyframes animate {
+  0% {
+    stroke-dasharray: 295;
+    stroke-dashoffset: 295;
+  }
+  50% {
+    stroke-dasharray: 295;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 295;
+    stroke-dashoffset: -295;
+  }
+}
+
+.valid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  z-index: 10; /* Make sure it's above the loader circles */
+}
+
+.valid img {
+  width: 50px; /* Adjust size as needed */
+}
+
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <a class="valid" href="https://validator.w3.org/check?uri=referer" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+      <img src="picture/valid-html5.png" alt="HTML Valid" />
+    </a>
+  </div>
+</body>
+</html>
