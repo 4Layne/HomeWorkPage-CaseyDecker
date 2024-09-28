@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+    initial-scale=1.0">    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.97);
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+
+.title-container {
+  text-align: center;
+  margin-top: 5rem; 
+  z-index: 1;
+  margin-bottom: 85px;
+}
+
+.text1 {
+  color: silver;
+  font-size: 90px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 800;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+  animation: text 3s 1;
+}
+
+.text2 {
+  color: silver;
+  font-size: 70px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 800;
+}
+
+.container {
+  margin-top: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 20px;
+  margin-top: 2rem;
+  z-index: 1;
+  border: 20px solid silver;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+}
+
+ .slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(61, 60, 60, 0.572);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 3;
+}
+.arrow:hover {
+  padding-left: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 18px;
+}
+.arrow-left {
+  left: 0;
+  z-index: 3;
+}
+
+.arrow-right {
+  right: 0;
+  z-index: 3;
+}
+
+.loader {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.text-container{
+    display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  width: 800px;
+  margin: 0 auto;
+  height: 500px;
+}
+.text-container1 {
+  align-items: center;
+  width: 800px;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  background-color:#9a9898 ;
+  margin-bottom: 50px;
+  transition: box-shadow 0.20s;
+  transition: background-color 0.3s;
+  transition: padding-top 1s;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.text-container1:hover{
+  width: 810px;
+}
+.text-container1:hover{
+  opacity: 0.9;
+}
+.text-container1:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+.youtube-container{
+width: 900px;
+  height: 506px;
+  display: flex;
+  align-items: top ;
+  justify-content: center;
+  transition: width 0.3s ease, height 0.3s ease;
+  border: solid 20px silver;
+  border-radius: 20px;
+}
+.youtube-container:hover{
+  width: 950px;
+  height: 534px;
+}
+.picture{
+  height: 281px;
+  width: 500px;
+  margin-top: 50px;
+}
+.section1-text, .section2-text, .section3-text{
+  font-family: "Exo 2", sans-serif;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.text-container1{
+  padding: 60px;
+}
+.section2-text,.section3-text{
+  margin-top: 20px;
+}
+.link, .link1{
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+   font-family: "Exo 2", sans-serif;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  text-decoration-line: none;
+}
+.link1{
+  margin-top: 10px;
+}
+.indent{
+  margin-left: 25px;
+}
+
+.loader {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  z-index: 3;
+}
+
+.loader svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loader svg circle {
+  fill: none;
+  stroke: #8c8a8a;
+  stroke-width: 10px;
+  animation: animate 2s linear infinite;
+  stroke-linecap: round;
+}
+
+.loader svg:nth-child(1) circle {
+  filter: blur(10px);
+  stroke: #929292;
+}
+
+.loader svg:nth-child(2) circle {
+  filter: blur(20px);
+  stroke: #e70101;
+}
+
+@keyframes animate {
+  0% {
+    stroke-dasharray: 295;
+    stroke-dashoffset: 295;
+  }
+  50% {
+    stroke-dasharray: 295;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 295;
+    stroke-dashoffset: -295;
+  }
+}
+
+.valid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  z-index: 10; /* Make sure it's above the loader circles */
+}
+
+.valid img {
+  width: 80px; /* Adjust size as needed */
+}
+
+
+
+</style>
+
+</head>
+<body>
+<body>
+  <div id="particles-js"></div>
+
+
+  <div class="title-container">
+    <span class="text1">TERMINATOR 2</span><br>
+    <span class="text2">JUDGMENT DAY</span>
+  </div>
+
+<div class="text-container"></div>
+  <div class="text-container1">
+<p class="section1-text"><span class="indent">TERMINATOR</span> 2 JUDGMENT DAY is a science fiction film released in 1991. Sequel to the first 1984 film “The Terminator”.
+The T-1000 Terminator was sent from the future by Skynet to kill John Connor who will grow up and lead the Human
+Resistance against Skynet. The T-800 Terminator was sent back to protect John Connor from the T-1000. While the T-1000
+and John Connor form a friendship.</p>
+
+<p class="section2-text"><span class="indent">Starring</span> Arnold Schwarzenegger as the Terminator, Robert Partrick as the T-1000, Edward Furlong as John Connor and Linda
+Hamilton as Sarah Connor.</p>
+
+<p class="section3-text"><span class="indent">While</span> 2 judgment day is quite an unrealistic film, it does have some realistic moments in the movie. The nuke
+scene at the end of the film was the best example of a nuke. It is known as one of the most realistic descriptions of a
+nuclear holocaust. Also, T-800 forming a human connection with John Connor seems realistic because of the new Ai.</p>
+
+
+<a class="link" target="_blank" href="https://www.netflix.com/browse?jbv=60028202"><img class="picture" src="picture/terminator-other.jpg" ></a>
+<a class="link1" target="_blank" href="https://www.netflix.com/browse?jbv=60028202">Click Now to Watch on NETFLIX  <i class="fa-solid fa-arrow-up-long"></i></a>
+
+  </div>
+</div>
+
+<div class="youtube-section" style="margin-bottom: 20px;">
+  <section class="youtube-container">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GK6FLjUdLN8?si=qyRaIte7p2MR5lAo"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+</div>
+<div class="youtube-section" style="margin-bottom: 20px;">
+  <section class="youtube-container">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XY5itMQpsLY?si=IU4AwJfGJMEKqlbX"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+</div>
+
+<div class="youtube-section">
+  <section class="youtube-container">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qqN4b1a3HMU?si=GoRYcpWrTXAnUx9d"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+</div>
+
+  <section class="container">
+    <div class="slider-wrapper">
+      <div class="slider" id="slider">
+        <img id="slider-img-3" src="picture/terminator3.jpg">
+        <img id="slider-img-1" src="picture/terminator1.jpg">
+        <img id="slider-img-2" src="picture/terminator7.jpg">
+        <img id="slider-img-4" src="picture/terminator4.jpg">
+        <img id="slider-img-6" src="picture/terminator8.jpeg">
+        <img id="slider-img-5" src="picture/terminator5.jpg">
+        <img id="slider-img-7" src="picture/terminator9.jpg">
+      </div>
+      <button class="arrow arrow-left" id="prevBtn">&#10094;</button>
+      <button class="arrow arrow-right" id="nextBtn">&#10095;</button>
+    </div>
+  </section>
+<script>
+  const slider = document.getElementById('slider');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  const slides = slider.querySelectorAll('img');
+  let slideWidth = slides[0].clientWidth;  
+
+  let currentIndex = 0;
+
+  function updateSliderPosition() {
+    slideWidth = slides[0].clientWidth;  
+    slider.scrollTo({
+      left: currentIndex * slideWidth,
+      behavior: 'smooth'
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSliderPosition();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSliderPosition();
+  });
+
+
+  window.addEventListener('resize', () => {
+    updateSliderPosition();
+  });
+</script>
+
+  <div class="loader">
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="50"></circle>
+    </svg>
+    <a class="valid" href="https://validator.w3.org/check?uri=referer" target="_blank"
+      referrerpolicy="no-referrer-when-downgrade"><img src="picture/valid-html5.png" alt="HTML Valid"></a>
+  </div>
+
+  <script src="code/particles.js"></script>
+  <script src="code/app.js"></script>
+</body>
+</html>

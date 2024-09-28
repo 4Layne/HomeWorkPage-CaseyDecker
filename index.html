@@ -6,7 +6,7 @@
     initial-scale=1.0">
     <link rel="stylesheet" href="effects.css">
    
-    <title>HomeWorkPage</title>
+    <title>CaseyDeckerHomePage</title>
 
 
 <style>
@@ -100,6 +100,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 
  }
   table{
@@ -109,6 +110,7 @@ h1{
     border-radius: 20px;
     align-items: center;
     height: 700px;
+    z-index: 2;
   }
   td{
     text-align: center;
@@ -138,7 +140,7 @@ h1{
     color: white;
   }
   .due-points-blue{
-    color:#390da9;
+    color:#1b92f5 !important ;
     font-family:Georgia, 'Times New Roman', Times, serif 
   }
   .due-points-blue:hover{
@@ -147,7 +149,7 @@ h1{
     color: white;
   }
   .link-blue{
-    color:#390da9 ;
+    color:#1b92f5 !important ;
   }
   .link-green{
     color:#338820;
@@ -155,8 +157,12 @@ h1{
   .link-green:hover{
     border-radius: 50px;
     background-color:rgba(193, 188, 188, 0.85) ;
-    color: white;
   }
+.link-blue:hover{
+    border-radius: 50px;
+    background-color:rgba(193, 188, 188, 0.85) ;
+    
+}
 
 
 </style>
@@ -165,6 +171,8 @@ h1{
   </head>
   <body>
   
+    <div id="particles-js"></div>
+
     <div class="title2">
       <span style="--i:1">C</span>
       <span style="--i:2">A</span>
@@ -206,43 +214,43 @@ h1{
         </tr>
   
         <tr>
-          <td class="link-green"><a class="link-blue" href="index.html"> HomePage </a></td>
+          <td class="link-blue"><a class="link-blue" target="_blank" href="index.html"> HomePage </a></td>
           <td class="due-points-blue" > 9/29 </td>
           <td class="due-points-blue" > 50 </td>
         </tr>
   
         <tr>
-          <td class="link-green"> <a class="link-green" href="index.html"> Movie Review </a></td>
+          <td class="link-green"> <a class="link-green" target="_blank" href="movie.html"> Movie Review </a></td>
           <td class="due-points-green"> 9/27 </td>
           <td class="due-points-green"> 50 </td>
         </tr>
   
         <tr>
-          <td class="link-green"> <a class="link-blue" href="index.html"> Graphic Page</a> </td>
+          <td class="link-blue"> <a class="link-blue" target="_blank" href="https://validator.w3.org/check?uri=referer"> Graphic Page</a> </td>
           <td class="due-points-blue" > 10/4 </td>
           <td class="due-points-blue" > 50 </td>
         </tr>
   
         <tr>
-          <td class="link-green"> <a class="link-green" href="index.html"> Info Form</a> </td>
+          <td class="link-green"> <a class="link-green" target="_blank" href="https://www.w3schools.com/html/default.asp"> Info Form</a> </td>
           <td class="due-points-green"> 10/11 </td>
           <td class="due-points-green"> 50 </td>
         </tr>
   
         <tr>
-          <td class="link-green"> <a class="link-blue" href="index.html"> Website Review</a> </td>
+          <td class="link-blue"> <a class="link-blue" target="_blank" href="https://www.liveabout.com/web-developer-job-description-salary-and-skills-2061841"> Website Review</a> </td>
           <td class="due-points-blue" > 10/18 </td>
           <td class="due-points-blue" > 50 </td>
         </tr>
         
         <tr>
-          <td class="link-green"> <a class="link-green" href="index.html"> Dreamweaver </a> </td>
+          <td class="link-green"> <a class="link-green" target="_blank" href="https://cis133.com/"> Dreamweaver </a> </td>
           <td class="due-points-green"> 11/15 </td>
           <td class="due-points-green"> 50 </td>
         </tr>
   
         <tr>
-          <td class="link-green"> <a class="link-blue" href="index.html">Final</a> </td>
+          <td class="link-blue"> <a class="link-blue" target="_blank" href="https://code.visualstudio.com/download">Final</a> </td>
           <td class="due-points-blue" > 12/10 </td>
           <td class="due-points-blue" > 200 </td>
         </tr>
@@ -261,5 +269,8 @@ h1{
     </svg>
     <a class="valid"  href="https://validator.w3.org/check?uri=referer" target="_blank" referrerpolicy="no-referrer-when-downgrade"><img src="picture/valid-html5.png" alt="HTML Valid"></a>
   </div>
+
+  
+
   </body>
 </html>
